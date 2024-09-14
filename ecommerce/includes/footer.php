@@ -8,7 +8,7 @@
 </head>
 <body>
     <footer>
-        <img src="../assets/images/elfrida.jpg" alt="Elfrida Logo" id="elfrida-logo">
+        <img src="./assets/images/elfrida.jpg" alt="Elfrida Logo">
         <h4>USER INTERFACE DESIGN, INTERACTION, DESIGN SYSTEMS<br>& ART DIRECTION.</h4>
         <div class="partitions">
             <div class="partition"><h4>FREE STANDARD DELIVERY</h4></div>

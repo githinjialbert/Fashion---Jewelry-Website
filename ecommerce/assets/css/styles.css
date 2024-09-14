@@ -1,52 +1,66 @@
+/* Must include to all html pages */
 body {
     padding: 0;
     margin: 0;
     font-family: Georgia, 'Times New Roman', Times, serif;
     background-color: #f4f4f9;
+    height: 100vh;
 }
 
+/* header.css file */
 header {
-    background-color: #4d4d4d;
+    background-color: transparent;
     padding: 20px 0;
     display: flex;
     justify-content: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    position: sticky;
+    position: absolute;
+    width: 100%;
     top: 0;
     z-index: 1000;
 }
-
 nav {
     display: flex;
-    gap: 40px;
+    gap: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 30px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-
 .navigation {
-    color: whitesmoke;
+    color: #fff;
     text-decoration: none;
-    font-size: 1.1rem;
-    font-weight: bold;
+    font-size: 1.2rem;
+    font-weight: 600;
     padding: 10px 15px;
     transition: color 0.3s ease, transform 0.2s ease;
 }
-
 .navigation:hover {
-    color: #ffeb3b;
-    transform: scale(1.1);
+    color: #f07a1a; 
+    transform: translateY(-3px);
+    border-bottom: 2px solid whitesmoke; 
+}
+.main-imgsec {
+    background-image: url('../images/home-1-blog-3.jpg');
+    background-size: cover;
+    background-position: top center;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+/* footer.css file */
 footer {
     text-align: center;
     background-color: #262626;
     color: rgb(224, 224, 224);
     padding-top: 40px;
 }
-
 #elfrida-logo {
     opacity: 0.6;
     color: whitesmoke;
 }
-
 .partitions {
     display: flex;
     justify-content: space-between;
@@ -55,7 +69,6 @@ footer {
     border-top: 1px solid whitesmoke;
     border-bottom: 1px solid whitesmoke;
 }
-
 .partition {
     flex: 1;
     padding: 10px;
@@ -64,16 +77,13 @@ footer {
     font-size: 1.1rem;
     padding: 30px;
 }
-
 .partition:first-child {
     border-left: none;
 }
-
 .partition h4 {
     margin: 0;
     font-size: 1rem;
 }
-
 .details-section {
     display: flex;
     justify-content: space-around;
@@ -81,22 +91,18 @@ footer {
     gap: 20px;
     margin: 20px 0;
 }
-
 .details {
     width: 350px;
     text-align: left;
 }
-
 .details h3 {
     font-size: 1.2rem;
     margin-bottom: 10px;
 }
-
 .details p {
     font-size: 1rem;
     margin: 10px 0;
 }
-
 #input-footer {
     padding: 10px;
     width: 100%;
@@ -106,27 +112,110 @@ footer {
     color: #000;
     margin-top: 10px;
 }
-
 .details ul {
     list-style: none;
     padding: 0;
     margin-top: 20px;
 }
-
 .details ul li {
     margin: 10px 0;
 }
-
 .details ul a {
     text-decoration: none;
     font-weight: bold;
     color: rgb(224, 224, 224);
 }
-
 .details ul a:hover {
     text-decoration: underline;
 }
 #last-item {
     border-top: 1px solid whitesmoke;
     padding-bottom: 10px;
+}
+
+
+/* the home index page */
+#home-button-explore{
+    border: 1px solid whitesmoke;
+    padding: 15px 35px 15px 35px;
+    cursor: pointer;
+    background: transparent;
+    color: whitesmoke;
+    font-size: 12px;
+    transition: transform 0.3s ease;
+}
+#home-button-explore:hover {
+    background: whitesmoke;
+    color: black;
+    transform: scale(1.1);
+}
+.product-section1 {
+    text-align: center;
+    padding: 60px;
+    background-color: white;
+}
+
+.product-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px; 
+    margin-top: 80px;
+}
+.product-sec {
+    border: 1px solid lightgray;
+}
+.product-sec img {
+    width: 100%;
+    height: auto; 
+    display: block;
+    object-fit: cover; 
+}
+#add-to-cart {
+    background: black;
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+#add-to-cart:hover, #discover:hover {
+    transform: scale(0.9);
+    background-color: black;
+}
+#discover {
+    background: black;
+    color: white;
+    border: none;
+    padding: 15px 25px 15px 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transition: transform 0.3s ease;
+    cursor: pointer; 
+}
+.info-section {
+    background: #f2f2e6;
+    margin: 0;
+    padding: 60px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#bag_carrying {
+    height: 300px;
+    width: 500px;
+    gap: 50px;
+}
+.inf0 {
+    padding: 50px;
+}
+.design-section {
+    background-image: url('../images/Main-home-parallax-img-1.jpg');
+    height: 50vh;
+    background-position: center center;
+    background-size: cover;
+    color: whitesmoke;
+    padding: 70px;
 }
