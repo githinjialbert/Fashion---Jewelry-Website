@@ -12,72 +12,51 @@
         <div class="main-imgsec">
             <button id="home-button-explore">EXPLORE THE CAMPAIGN</button>
         </div>
-        <div class="product-section1">
+        <section class="product-section1">
             <h2>ELEGANCE EXPRESS:<br>CLASSIC AND<br>CONTEMPORARY STYLES</h2>
-            <div class="product-section">
-                <div class="product-sec">
-                    <img src="./assets/images/dragonearrings.jpg" alt="dragon-earrings"/>
-                    <button id="add-to-cart">ADD TO CART</button>
-                </div>
-                <div class="product-sec">
-                    <img src="./assets/images/bronzenecklace.jpg" alt="bronze-necklace"/>
-                    <button id="add-to-cart">ADD TO CART</button>
-                </div>
-                <div class="product-sec">
-                    <img src="./assets/images/necklace.jpg" alt="necklace"/>
-                    <button id="add-to-cart">ADD TO CART</button>
-                </div>
-                <div class="product-sec">
-                    <img src="./assets/images/weddingring.jpg" alt="wedding-ring"/>
-                    <button id="add-to-cart">ADD TO CART</button>
-                </div>
+            <div id="product-section">
             </div>
-        </div>
-        <div class="info-section">
-            <section class="info">
+        </section>
+
+        <section class="info-section">
+            <div class="info">
                 <h2>STEP INTO OUR FASHION BOTIQUE WHERE<br> ELEGANCE MEETS TRENDSETTING STYLE</h2>
-                <p>Offering a curated collection of haute couture, timeless classics,<br> and must-have accessories designed to elevate your wardrobe<br>
-            and celebrate your unique sense of fashion.
-                </p>
+                <p>Offering a curated collection of haute couture, timeless classics,<br> and must-have accessories designed to elevate your wardrobe<br>and celebrate your unique sense of fashion.</p>
                 <button id="discover">DISCOVER MORE</button>
-            </section>
-            <section class="info">
-                <img src="./assets/images/bag_carrying.jpg" alt="bag_carrrying" id="bag_carrying"/>
-            </section>
-        </div>
-        <div class="product-section1">
-            <h2>NEW ARRIVALS SPRING SUMMER</h2>
-            <div class="product-section">
-                <div class="product-sec">
-                    <img src="./assets/images/bordeux.jpg" alt="dragon-earrings"/>
-                    <button id="add-to-cart">ADD TO CART</button>
-                </div>
-                <div class="product-sec">
-                    <img src="./assets/images/redbag.jpg" alt="bronze-necklace"/>
-                    <button id="add-to-cart">ADD TO CART</button>
-                </div>
-                <div class="product-sec">
-                    <img src="./assets/images/purplepurse.jpg" alt="necklace"/>
-                    <button id="add-to-cart">ADD TO CART</button>
-                </div>
-                <div class="product-sec">
-                    <img src="./assets/images/pinkhandbag.jpg" alt="wedding-ring"/>
-                    <button id="add-to-cart">ADD TO CART</button>
-                </div>
-                <div class="product-sec">
-                    <img src="./assets/images/yellowbag.jpg" alt="wedding-ring"/>
-                    <button id="add-to-cart">ADD TO CART</button>
-                </div>
-                <div class="product-sec">
-                    <img src="./assets/images/partypurse.jpg" alt="wedding-ring"/>
-                    <button id="add-to-cart">ADD TO CART</button>
-                </div>
             </div>
-        </div>
-        <div class="design-section">
-            <h1>Must-have accessories designed to elevate your wardrobe<br> and celebrate your unique sense of fashion<h1>
-            <button id="home-button-explore">DISCOVER</button>
-        </div>
+            <div class="info">
+                <img src="./assets/images/bag_carrying.jpg" alt="bag_carrrying" id="bag_carrying"/>
+            </div>
+        </section>
+
+        <section class="product-section1">
+            <h2>NEW ARRIVALS SPRING SUMMER</h2>
+            <div id="product-section">
+            </div>
+        </section>
+
+        <section class="design-section">
+            <h1>Must-have accessories designed to elevate your wardrobe<br> and celebrate your unique sense of fashion</h1>
+            <button id="discover">DISCOVER</button>
+        </section>
+
+        <section class="blog-section">
+            <h2>STYLE STORIES: INSIDE THE FASHION STORE</h2>
+            <div class="blog">
+                <?php 
+                $blogs = [
+                    "orange.jpg" => "THE LATEST FASHION TRENDS<br> REDEFINE ELEGANCE, BLENDING<br>STYLE WITH BEAUTY",
+                    "home-1-blog-2.jpg" => "BEAUTY ROUTINES ENHANCE<br>CONFIDENCE, COMPLIMENTING<br>YOUR FASHION CHOICES",
+                    "home-1-blog-3.jpg" => "FASHION AND BEAUTY EVOLVE,<br>REFLECTING CULTURAL<br>INFLUENCES AND CREATIVITY"
+                ];
+                foreach ($blogs as $image => $title): ?>
+                <div class="blog-sec">
+                    <img src="./assets/images/<?= $image ?>" alt="blog-image"/>
+                    <a href="#"><?= $title ?></a>
+                </div>
+                <?php endforeach; ?>
+            </div>
+        </section>
     </main>
     <script src="./assets/js/app.js"></script>
 </body>
