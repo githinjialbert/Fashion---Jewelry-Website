@@ -136,3 +136,30 @@ const setupCarousel = () => {
 };
 
 setupCarousel();
+
+
+const blogItems = [
+    { image: "orange.jpg", text: "THE LATEST FASHION TRENDS<br> REDEFINE ELEGANCE, BLENDING<br>STYLE WITH BEAUTY" },
+    { image: "home-1-blog-2.jpg", text: "BEAUTY ROUTINES ENHANCE<br>CONFIDENCE, COMPLIMENTING<br>YOUR FASHION CHOICES" },
+    { image: "home-1-blog-3.jpg", text: "FASHION AND BEAUTY EVOLVE,<br>REFLECTING CULTURAL<br>INFLUENCES AND CREATIVITY" }
+];
+
+const blogSec = document.getElementById("blog-sec");
+
+blogItems.forEach(item => {
+    const blogDiv = document.createElement("div");
+    blogDiv.classList.add("blog-sec");
+
+    const img = document.createElement("img");
+    img.src = `./assets/images/${item.image}`; 
+    
+    const text = document.createElement("a");
+    text.href = "#";
+    text.innerHTML = item.text;
+     
+
+    blogDiv.appendChild(img);
+    blogDiv.appendChild(text);
+
+    blogSec.appendChild(blogDiv);
+});

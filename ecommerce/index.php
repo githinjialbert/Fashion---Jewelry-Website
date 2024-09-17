@@ -36,14 +36,11 @@
                 </div>
             </div>
         </section>
-
-
-
         <section class="design-section">
             <h1>Must-have accessories designed to elevate your wardrobe<br> and celebrate your unique sense of fashion</h1>
             <button id="discover">DISCOVER</button>
         </section>
-
+        
         <section class="blog-section">
             <h2>STYLE STORIES: INSIDE THE FASHION STORE</h2>
             <div class="blog" id="blog-sec"></div>
