@@ -46,20 +46,7 @@
 
         <section class="blog-section">
             <h2>STYLE STORIES: INSIDE THE FASHION STORE</h2>
-            <div class="blog">
-                <?php 
-                $blogs = [
-                    "orange.jpg" => "THE LATEST FASHION TRENDS<br> REDEFINE ELEGANCE, BLENDING<br>STYLE WITH BEAUTY",
-                    "home-1-blog-2.jpg" => "BEAUTY ROUTINES ENHANCE<br>CONFIDENCE, COMPLIMENTING<br>YOUR FASHION CHOICES",
-                    "home-1-blog-3.jpg" => "FASHION AND BEAUTY EVOLVE,<br>REFLECTING CULTURAL<br>INFLUENCES AND CREATIVITY"
-                ];
-                foreach ($blogs as $image => $title): ?>
-                <div class="blog-sec">
-                    <img src="./assets/images/<?= $image ?>" alt="blog-image"/>
-                    <a href="#"><?= $title ?></a>
-                </div>
-                <?php endforeach; ?>
-            </div>
+            <div class="blog" id="blog-sec"></div>
         </section>
     </main>
     <script src="./assets/js/app.js"></script>
