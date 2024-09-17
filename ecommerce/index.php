@@ -28,12 +28,16 @@
                 <img src="./assets/images/bag_carrying.jpg" alt="bag_carrrying" id="bag_carrying"/>
             </div>
         </section>
-
+        
         <section class="product-section1">
             <h2>NEW ARRIVALS SPRING SUMMER</h2>
-            <div id="product-section">
+            <div id="product-section-carousel" class="carousel-container">
+                <div id="carousel-wrapper" class="carousel-wrapper">
+                </div>
             </div>
         </section>
+
+
 
         <section class="design-section">
             <h1>Must-have accessories designed to elevate your wardrobe<br> and celebrate your unique sense of fashion</h1>

@@ -105,7 +105,7 @@ carouselProducts.forEach(product => {
 });
 
 
-const slideSpeed = 3000;
+const slideSpeed = 2000;
 let carouselInterval;
 
 const slideCarousel = () => {
@@ -117,7 +117,7 @@ const slideCarousel = () => {
         carouselWrapper.style.transition = 'none';
         carouselWrapper.style.transform = `translateX(0)`;
         carouselWrapper.appendChild(firstProduct);
-    }, 2000);
+    }, 1000);
 };
 
 const startCarousel = () => {
