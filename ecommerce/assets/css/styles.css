@@ -135,7 +135,7 @@ footer {
 
 
 /* the home index page */
-#home-button-explore{
+#home-button-explore {
     border: 1px solid whitesmoke;
     padding: 15px 35px 15px 35px;
     cursor: pointer;
@@ -143,6 +143,7 @@ footer {
     color: whitesmoke;
     font-size: 12px;
     transition: transform 0.3s ease;
+    width: 250px;
 }
 #home-button-explore:hover {
     background: whitesmoke;
@@ -161,8 +162,8 @@ footer {
 #product-section, #product-section-carousel {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 10px; 
-    margin-top: 80px;
+    gap: 40px; 
+    margin-top: 70px;
 }
 .product-sec {
     border: 1px solid lightgray;
@@ -177,14 +178,14 @@ footer {
     background: black;
     color: white;
     border: none;
-    width: 100%;
-    padding: 20px;
+    width: 90%;
+    padding: 10px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     transition: transform 0.3s ease;
     cursor: pointer;
 }
 .button:hover, #discover:hover {
-    transform: scale(0.9);
+    transform: scale(0.8);
     background-color: black;
 }
 #discover {
@@ -319,22 +320,7 @@ a {
 .input-section button:hover {
     opacity: 0.9;
 }
-
-
-/* SHOP PAGE */ 
-.product-section2 {
-    text-align: center;
-    padding: 60px;
-    background-color: white;
-}
-#product-section3 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    margin: 80px; 
-}
-.product-sec {
-    border: 1px solid lightgray;
-    padding: 10px;
-    text-align: center;
+.main-section h1 {
+    margin-top: 40px;
+    font-size: 40px;
 }

@@ -12,9 +12,12 @@
         <div class="main-imgsec">
             <button id="home-button-explore">EXPLORE THE CAMPAIGN</button>
         </div>
+
         <section class="product-section1">
-            <h2>ELEGANCE EXPRESS:<br>CLASSIC AND<br>CONTEMPORARY STYLES</h2>
-            <div id="product-section">
+            <h2>NEW ARRIVALS SPRING SUMMER</h2>
+            <div id="product-section-carousel" class="carousel-container">
+                <div id="carousel-wrapper" class="carousel-wrapper">
+                </div>
             </div>
         </section>
 
@@ -29,13 +32,6 @@
             </div>
         </section>
         
-        <section class="product-section1">
-            <h2>NEW ARRIVALS SPRING SUMMER</h2>
-            <div id="product-section-carousel" class="carousel-container">
-                <div id="carousel-wrapper" class="carousel-wrapper">
-                </div>
-            </div>
-        </section>
         <section class="design-section">
             <h1>Must-have accessories designed to elevate your wardrobe<br> and celebrate your unique sense of fashion</h1>
             <button id="discover">DISCOVER</button>
