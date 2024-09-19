@@ -53,7 +53,7 @@ nav {
 /* footer.css file */
 footer {
     text-align: center;
-    background-color: #262626;
+    background-color: #18191a;
     color: rgb(224, 224, 224);
     padding-top: 40px;
 }
@@ -293,4 +293,48 @@ a {
 }
 .info-section1 {
     background-color: #f29655;
+}
+
+/* CONTACT US */ 
+.input-section {
+    text-align: center;
+    background-color: white;
+    padding: 50px;
+    border: 1px solid lightgrey;
+}
+.input-section input, button {
+    width: 50%;
+    padding: 15px 25px 15px 25px;
+    margin: 20px;
+}
+.input-section button {
+    background: black;
+    color: white;
+    border: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+    cursor: pointer; 
+}
+.input-section button:hover {
+    opacity: 0.9;
+}
+
+
+/* SHOP PAGE */ 
+.product-section2 {
+    text-align: center;
+    padding: 60px;
+    background-color: white;
+}
+#product-section3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 80px; 
+}
+.product-sec {
+    border: 1px solid lightgray;
+    padding: 10px;
+    text-align: center;
 }

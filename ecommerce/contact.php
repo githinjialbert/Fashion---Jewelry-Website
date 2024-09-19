@@ -8,6 +8,23 @@
     <title>Contact Us</title>
 </head>
 <body>
+    <section class="about">
+        <h1>CONTACT US</h1>
+    </section>
+    <section class="input-section">
+        <h2>CONTACT US ANYTIME</h2>
+        <p>Liber iriure vix cu, fugit dicat no qui, posse detraxit has cu ex sint nisl discere te, tibique blandit urbanitas</p>
+        <input type="text" name="name" placeholder="Name*" required />
+        <input type="email" name="email" placeholder="Email*" required />
+        <input type="text" name="message" placeholder="Message*" required />
+        <button type="submit">SUBMIT</button>
+
+        <h4>STORE OF ACCESSORIES</h4>
+        <p>Via Giulia 83, 00186 Roma, Italy, Europe</p>
+        <p>+ 3 20 6800 1007, + 3 20 6800 1008</p>
+        <p>elfrida@example.com</p>
+
+    </section>
     <script src="./assets/css/styles.css"></script>
 </body>
 </html>

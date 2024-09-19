@@ -61,7 +61,7 @@ const carouselProducts = [
     {image: "partypurse.jpg", alt: "partypurse", name: "PARTY PURSE", price: "$300"  },
 ];
 
-const carouselWrapper = document.getElementById('carousel-wrapper');
+const carouselWrapper = document.getElementById('carousel-wrapper'); 
 
 
 carouselProducts.forEach(product => {
@@ -162,4 +162,62 @@ blogItems.forEach(item => {
     blogDiv.appendChild(text);
 
     blogSec.appendChild(blogDiv);
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const shopProducts = [
+        { image: "dragonearrings.jpg", alt: "dragon-earrings", name: "EARRINGS", price: "$260" },
+        { image: "bronzenecklace.jpg", alt: "bronze-necklace", name: "BRONZE NECKLACE", price: "$260" },
+        { image: "necklace.jpg", alt: "necklace", name: "NECKLACE", price: "$260" },
+        { image: "weddingring.jpg", alt: "wedding-ring", name: "WEDDING RING", price: "$260" },
+        { image: "bordeux.jpg", alt: "bordeux", name: "BORDEUX", price: "$320" },
+        { image: "redbag.jpg", alt: "redbag", name: "BORDEUX BAG", price: "$320" },
+        { image: "purplepurse.jpg", alt: "purplepurse", name: "PURPLE PURSE", price: "$285" },
+        { image: "pinkhandbag.jpg", alt: "pinkhandbag", name: "PINK HANDBAG", price: "$300" },
+        { image: "yellowbag.jpg", alt: "yellowbag", name: "YELLOW HANDBAG", price: "$320" },
+        { image: "partypurse.jpg", alt: "partypurse", name: "PARTY PURSE", price: "$300" }
+    ];
+
+    const productSections = document.querySelectorAll(".product-section3");
+
+    productSections.forEach(productSec => {
+        shopProducts.forEach(product => {
+            const productDiv = document.createElement("div");
+            productDiv.classList.add("product-sec");
+
+            const image = document.createElement("img");
+            image.src = `./assets/images/${product.image}`;
+            image.alt = product.alt;
+
+            const productName = document.createElement("p");
+            productName.textContent = product.name;
+
+            const productPrice = document.createElement("p");
+            productPrice.textContent = product.price;
+
+            const button = document.createElement("button");
+            button.textContent = "ADD TO CART";
+            button.classList.add("button");
+            button.style.display = "none";
+
+            button.addEventListener("click", () => {
+                button.textContent = "VIEW CART";
+            });
+
+            productDiv.addEventListener("mouseenter", () => {
+                button.style.display = "block";
+            });
+
+            productDiv.addEventListener("mouseleave", () => {
+                button.style.display = "none";
+            });
+
+            productDiv.appendChild(image);
+            productDiv.appendChild(productName);
+            productDiv.appendChild(productPrice);
+            productDiv.appendChild(button);
+
+            productSec.appendChild(productDiv);
+        });
+    });
 });
