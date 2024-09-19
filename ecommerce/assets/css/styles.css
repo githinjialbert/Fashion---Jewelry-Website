@@ -135,6 +135,36 @@ footer {
 
 
 /* the home index page */
+.main-section-cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: white;
+}
+#cart-products {
+    border: 1px solid lightgray;
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+}
+#button {
+    background-color: black;
+    border: none;
+    color: white;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    font-size: 18px;
+}
+#button:hover {
+    opacity: 0.9;
+    transform: scale(0.8);
+}
 #home-button-explore {
     border: 1px solid whitesmoke;
     padding: 15px 35px 15px 35px;
