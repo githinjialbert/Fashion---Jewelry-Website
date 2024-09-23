@@ -10,9 +10,8 @@
 <body>
     <main class="main-section">
         <section class="product-section1">
-            <h1>Welcome to our shop</h1>
-            <div id="product-section" class="products-grid">
-            </div>
+            <h1>Welcome to Our Shop</h1>
+            <div id="product-section" class="products-grid"></div>
         </section>
     </main>
     <script src="./assets/js/app.js"></script>

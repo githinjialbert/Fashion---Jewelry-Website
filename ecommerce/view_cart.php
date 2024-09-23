@@ -9,8 +9,8 @@
 </head>
 <body>
     <main class="main-section-cart">
-        <div id="cart-products">Your cart is currently empty.</div>
-        <button type="submit" id="button">RETURN TO SHOP</button>
+        <div id="cart-products"></div>
+        <button type="button" id="button">RETURN TO SHOP</button>
     </main>
     <script src="./assets/js/app.js"></script>    
 </body>
