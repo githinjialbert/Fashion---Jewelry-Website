@@ -21,6 +21,8 @@ const products = [
     { image: "engagementring.jpg", alt: "engagementring", name: "ENGAGEMENT RING", price: "$300" }
 ];
 
+let cart = [];
+
 const renderProducts = (products, sectionId, limit) => {
     const productSection = document.getElementById(sectionId);
 
@@ -29,10 +31,9 @@ const renderProducts = (products, sectionId, limit) => {
         return;
     }
 
-    // Clear existing content in the section
     productSection.innerHTML = '';
 
-    // Render the products
+    
     products.slice(0, limit).forEach(product => {
         const productDiv = document.createElement("div");
         productDiv.classList.add("product-sec");
@@ -75,10 +76,9 @@ const renderProducts = (products, sectionId, limit) => {
     });
 };
 
-// Call the function for both the home and shop pages
 document.addEventListener("DOMContentLoaded", () => {
-    renderProducts(products, 'product-section', 4); // Home page (first 4 products)
-    renderProducts(products, 'product-section', products.length); // Shop page (all products)
+    renderProducts(products, 'product-section', 4);
+    renderProducts(products, 'product-section', products.length);
 });
 
 const carouselProducts = [
@@ -192,3 +192,79 @@ blogItems.forEach(item => {
 
     blogSec.appendChild(blogDiv);
 });
+
+
+/* VIEW CART ANALOGY */
+
+const addToCart = (product) => {
+    const cartProduct = cart.find(item => item.id === product.id);
+
+    if (cartProduct) {
+        cartProduct.quantity += 1;
+    } else {
+        cart.push({...product, quantity:1});
+    }
+    updateCart();
+}
+
+const updateCart = () => {
+    const cartProductsSection = document.getElementById("cart-products");
+
+    if (cart.length === 0) {
+        cartProductsSection.innerHTML = "Your cart is currently empty";
+        return;
+    }
+    
+    cartProductsSection.innerHTML = `
+    <table>
+    <thead>
+    <tr>
+    <th>PRODUCTS</th>
+    <th>PRICE</th>
+    <th>QUANTITY</th>
+    <th>SUBTOTAL</th>
+    </tr>
+    </thead>
+    <tbody>
+    ${cart.map(item => `
+        <tr>
+        <td>
+        <img src="./assets/images/${item.image}" alt="${item.alt}" style="width: 50px; height: 50px;">
+        ${item.name}
+        </td>
+        <td>$${item.price}</td>
+        <td>
+        <button class="decrease" data-id="${item.id}">-</button>
+        ${item.quantity}
+        <button class="increase" data-id="${item.id}">+</button>
+        </td>
+        <td>$${(item.price * item.quantity).toFixed(2)}</td>
+        </tr>
+        `).join('')}
+    </tbody>
+    </table>
+    `;
+
+    document.querySelectorAll('.increase').forEach(button => {
+        button.addEventListener("click", (event) => {
+            const id = parseInt(event.target.getAttribute("data-id"));
+            const product = cart.find(item => item.id === id);
+            product.quantity += 1;
+            updateCart();
+        });
+    });
+
+    document.querySelectorAll(".decrease").forEach(button => {
+        button.addEventListener("click", (event) => {
+            const id = parseInt(event.target.getAttribute("data-id"));
+            const product = cart.find(item => item.id === id);
+            if (product.quantity > 1) {
+                product.quantity -= 1;
+            }
+            else {
+                cart = cart.filter(item => item.id !== id);
+            }
+            updateCart();
+        })
+    })
+}
