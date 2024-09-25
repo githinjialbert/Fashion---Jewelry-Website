@@ -53,8 +53,10 @@ const renderProducts = (products, sectionId, limit) => {
         button.style.display = "none";
 
         button.addEventListener("click", () => {
-            addToCart(product);
-            button.textContent = "VIEW CART";
+            if (!stopAdding(button)) {
+                button.textContent = "VIEW CART";
+                addToCart(product);
+            }
         });
 
         productDiv.addEventListener("mouseenter", () => {
@@ -111,7 +113,7 @@ const updateCart = () => {
                     ${item.quantity}
                     <button class="increase" data-id="${item.id}">+</button>
                 </td>
-                <td>${(parseFloat(item.price.slice(1)) * item.quantity).toFixed(2)}</td>
+                <td>$${(parseFloat(item.price.slice(1)) * item.quantity).toFixed(2)}</td>
             </tr>`).join('')}
         </tbody>
     </table>
@@ -142,9 +144,17 @@ const updateCart = () => {
     });
 };
 
+const stopAdding = (button) => {
+    if (button.textContent === "VIEW CART") {
+        return true;
+    }
+    return false;
+}
+
+
 document.addEventListener("DOMContentLoaded", () => {
     const path = window.location.pathname;
-    const isCartPage = path.includes("cart.php");
+    const isCartPage = path.includes("view_cart.php");
 
     if (isCartPage) {
         updateCart();
@@ -156,20 +166,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Carousel setup
 const carouselProducts = [
-    { image: "bordeux.jpg", alt: "bordeux", name: "BORDEUX", price: "$320" },
-    { image: "redbag.jpg", alt: "redbag", name: "BORDEUX BAG", price: "$320" },
-    { image: "purplepurse.jpg", alt: "purplepurse", name: "PURPLE PURSE", price: "$285" },
-    { image: "pinkhandbag.jpg", alt: "pinkhandbag", name: "PINK HANDBAG", price: "$300" },
-    { image: "yellowbag.jpg", alt: "yellowbag", name: "YELLOW HANDBAG", price: "$320" },
-    { image: "partypurse.jpg", alt: "partypurse", name: "PARTY PURSE", price: "$300" },
+    { id: 20, image: "bordeux.jpg", alt: "bordeux", name: "BORDEUX", price: "$320" },
+    { id: 21, image: "redbag.jpg", alt: "redbag", name: "BORDEUX BAG", price: "$320" },
+    { id: 22, image: "purplepurse.jpg", alt: "purplepurse", name: "PURPLE PURSE", price: "$285" },
+    { id: 23, image: "pinkhandbag.jpg", alt: "pinkhandbag", name: "PINK HANDBAG", price: "$300" },
+    { id: 24, image: "yellowbag.jpg", alt: "yellowbag", name: "YELLOW HANDBAG", price: "$320" },
+    { id: 25, image: "partypurse.jpg", alt: "partypurse", name: "PARTY PURSE", price: "$300" },
 ];
 
-const carouselWrapper = document.getElementById('carousel-wrapper');
+const carouselWrapper = document.getElementById("carousel-wrapper");
 
 const setupCarousel = () => {
+
     carouselProducts.forEach(product => {
         const productDiv = document.createElement('div');
-        productDiv.classList.add('product-sec1');
+        productDiv.classList.add('product-sec');
 
         const img = document.createElement('img');
         img.src = `./assets/images/${product.image}`;
@@ -177,9 +188,11 @@ const setupCarousel = () => {
 
         const name = document.createElement('h5');
         name.textContent = product.name;
+        name.classList.add("product-name")
 
         const price = document.createElement('h7');
         price.textContent = product.price;
+        price.classList.add("product-price");
 
         const button = document.createElement("button");
         button.textContent = "ADD TO CART";
@@ -187,8 +200,10 @@ const setupCarousel = () => {
         button.style.display = "none";
 
         button.addEventListener("click", () => {
-            addToCart(product);
-            button.textContent = "VIEW CART";
+            if (!stopAdding(button)) {
+                button.textContent = "VIEW CART";
+                addToCart(product);
+            }
         });
 
         productDiv.addEventListener("mouseenter", () => {
@@ -215,6 +230,9 @@ const slideCarousel = () => {
     setTimeout(() => {
         carouselWrapper.style.transition = 'none';
         carouselWrapper.style.transform = `translateX(0)`;
+        for (let i = 0; i < 4; i++) {
+            carouselWrapper.appendChild(carouselWrapper.firstElementChild);
+        }
         carouselWrapper.appendChild(firstProduct);
     }, 1000);
 };
@@ -226,3 +244,30 @@ const startCarousel = () => {
 };
 
 setupCarousel();
+
+
+const blogItems = [
+    { image: "orange.jpg", text: "THE LATEST FASHION TRENDS<br> REDEFINE ELEGANCE, BLENDING<br>STYLE WITH BEAUTY" },
+    { image: "home-1-blog-2.jpg", text: "BEAUTY ROUTINES ENHANCE<br>CONFIDENCE, COMPLIMENTING<br>YOUR FASHION CHOICES" },
+    { image: "home-1-blog-3.jpg", text: "FASHION AND BEAUTY EVOLVE,<br>REFLECTING CULTURAL<br>INFLUENCES AND CREATIVITY" }
+];
+
+const blogSec = document.getElementById("blog-sec");
+
+blogItems.forEach(item => {
+    const blogDiv = document.createElement("div");
+    blogDiv.classList.add("blog-sec");
+
+    const img = document.createElement("img");
+    img.src = `./assets/images/${item.image}`; 
+    
+    const text = document.createElement("a");
+    text.href = "#";
+    text.innerHTML = item.text;
+     
+
+    blogDiv.appendChild(img);
+    blogDiv.appendChild(text);
+
+    blogSec.appendChild(blogDiv);
+});

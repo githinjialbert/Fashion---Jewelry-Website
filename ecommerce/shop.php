@@ -17,4 +17,4 @@
     <script src="./assets/js/app.js"></script>
 </body>
 </html>
-<?php require_once "./includes/footer.php" ?>
+<?php require_once "./includes/footer.php"?>

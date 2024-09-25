@@ -1,4 +1,3 @@
-<?php require_once "./includes/header.php" ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,14 +9,16 @@
 <body>
     <main class="main-section">
         <div class="main-imgsec">
+            <div>
+                <img src="./assets/images/logo2.png" alt="first_logo"/>
+                <img src="./assets/images/logo1.png" alt="second_logo"/>
+            </div>
             <button id="home-button-explore">EXPLORE THE CAMPAIGN</button>
         </div>
 
         <section class="product-section1">
             <h2>NEW ARRIVALS SPRING SUMMER</h2>
-            <div id="product-section-carousel" class="carousel-container">
                 <div id="carousel-wrapper" class="carousel-wrapper"></div>
-            </div>
         </section>
 
         <section class="info-section">
@@ -40,8 +41,9 @@
             <h2>STYLE STORIES: INSIDE THE FASHION STORE</h2>
             <div class="blog" id="blog-sec"></div>
         </section>
+        
     </main>
     <script src="./assets/js/app.js"></script>
 </body>
 </html>
-<?php require_once "./includes/footer.php" ?>
+<?php require_once "./includes/footer.php"?>
