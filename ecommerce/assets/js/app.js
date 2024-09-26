@@ -63,6 +63,11 @@ const renderProducts = (products, sectionId, limit) => {
             }
         });
 
+        const returnBtn = document.getElementById("button");
+        returnBtn.addEventListener("click", () => {
+            window.location.href = "http://localhost/Fashion---Jewelry-Website/ecommerce/shop.php#";
+        });
+
 
         productDiv.addEventListener("mouseenter", () => {
             button.style.display = "block";
@@ -302,5 +307,4 @@ const cartTotalsSection = () => {
     `;
 
     cartTotalsSection();
-
 }
