@@ -57,7 +57,12 @@ const renderProducts = (products, sectionId, limit) => {
                 button.textContent = "VIEW CART";
                 addToCart(product);
             }
+
+            else if (button.textContent === "VIEW CART") {
+                window.location.href = "http://localhost/Fashion---Jewelry-Website/ecommerce/view_cart.php#";
+            }
         });
+
 
         productDiv.addEventListener("mouseenter", () => {
             button.style.display = "block";
@@ -204,6 +209,9 @@ const setupCarousel = () => {
                 button.textContent = "VIEW CART";
                 addToCart(product);
             }
+            else if (button.textContent === "VIEW CART") {
+                window.location.href = "http://localhost/Fashion---Jewelry-Website/ecommerce/view_cart.php#";
+            }
         });
 
         productDiv.addEventListener("mouseenter", () => {
@@ -292,4 +300,7 @@ const cartTotalsSection = () => {
     <h3>TOTAL</h3>
     <p>$${totalPrice}</p>
     `;
+
+    cartTotalsSection();
+
 }

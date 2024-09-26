@@ -25,18 +25,17 @@
             <div class="details">
                 <h3>ABOUT US</h3>
                 <ul>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">Shop</a></li>
+                    <li><a href="http://localhost/Fashion---Jewelry-Website/ecommerce/about.php#">About Us</a></li>
+                    <li><a href="http://localhost/Fashion---Jewelry-Website/ecommerce/contact.php#">Contact Us</a></li>
+                    <li><a href="http://localhost/Fashion---Jewelry-Website/ecommerce/shop.php#">Shop</a></li>
                 </ul>
             </div>
             <div class="details">
                 <h3>HELP</h3>
                 <ul>
-                    <li><a href="#">Shop</a></li>
-                    <li><a href="#">Cart</a></li>
-                    <li><a href="#">My Account</a></li>
-                    <li><a href="#">Checkout</a></li>
+                    <li><a href="http://localhost/Fashion---Jewelry-Website/ecommerce/shop.php#">Shop</a></li>
+                    <li><a href="http://localhost/Fashion---Jewelry-Website/ecommerce/view_cart.php#">Cart</a></li>
+                    <li><a href="http://localhost/Fashion---Jewelry-Website/ecommerce/index.php#">Checkout</a></li>
                 </ul>
             </div>
         </section>

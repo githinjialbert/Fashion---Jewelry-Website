@@ -9,12 +9,11 @@
 <body>
     <header>
         <nav>
-        <a href="#" target="" class="navigation">Home</a>
-        <a href="#" target="" class="navigation">Shop</a>
-        <a href="#" target="" class="navigation">About Us</a>
-        <a href="#" target="" class="navigation">Contact Us</a>
-        <a href="#" target="" class="navigation">My Account</a>
-        <a href="#" target="" class="navigation">Cart</a>
+        <a href="http://localhost/Fashion---Jewelry-Website/ecommerce/index.php" target="_blank" class="navigation">Home</a>
+        <a href="http://localhost/Fashion---Jewelry-Website/ecommerce/shop.php#" target="_blank" class="navigation">Shop</a>
+        <a href="http://localhost/Fashion---Jewelry-Website/ecommerce/about.php#" target="_blank" class="navigation">About Us</a>
+        <a href="http://localhost/Fashion---Jewelry-Website/ecommerce/contact.php#" target="_blank" class="navigation">Contact Us</a>
+        <a href="http://localhost/Fashion---Jewelry-Website/ecommerce/view_cart.php#" target="_blank" class="navigation">Cart</a>
         </nav>
     </header>
     <script src="../assets/js/app.js"></script>
