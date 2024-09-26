@@ -59,6 +59,7 @@ footer {
     background-color: #18191a;
     color: rgb(224, 224, 224);
     padding: 40px 0;
+    z-index: 2;
 }
 
 #elfrida-logo {
@@ -153,7 +154,8 @@ footer {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: 100vh;
+    min-height: 100vh;
+    margin-top: 70px;
     background-color: white;
 }
 
@@ -443,6 +445,7 @@ td img {
     border-radius: 4px;
     transition: background-color 0.3s;
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 button:hover {
@@ -465,4 +468,31 @@ button.increase {
 td:last-child {
     font-weight: bold;
     color: #555;
+}
+
+#cart-totals {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    text-align: left;
+}
+
+#cart-totals h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#cart-totals p {
+    font-size: 1.2rem;
+    color: #555;
+    margin: 5px 0;
+}
+
+#cart-totals p:last-of-type {
+    font-weight: bold;
+    color: #ff6347;
 }

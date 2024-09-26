@@ -271,3 +271,25 @@ blogItems.forEach(item => {
 
     blogSec.appendChild(blogDiv);
 });
+
+const cartTotalsSection = () => {
+
+    const cartTotals = document.getElementById("cart-totals");
+    if (cart.length === 0) {
+        cartTotals.innerHTML = "";
+        return;
+    }
+
+    const totalPrice = cart.reduce((total, item) => {
+        return total + parseFloat(item.price.slice(1)) * item.quantity;
+    }, 0).toFixed(2);
+
+    cartTotals.innerHTML = `
+    <h3>CART TOTALS</h3>
+    <p>$${totalPrice}</p>
+    <h3>SHIPPING</h3>
+    <p>	Enter your address to view shipping options. <br>Calculate shipping</p>
+    <h3>TOTAL</h3>
+    <p>$${totalPrice}</p>
+    `;
+}
