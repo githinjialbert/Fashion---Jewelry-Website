@@ -14,11 +14,12 @@
     <section class="input-section">
         <h2>CONTACT US ANYTIME</h2>
         <p>Liber iriure vix cu, fugit dicat no qui, posse detraxit has cu ex sint nisl discere te, tibique blandit urbanitas</p>
-        <input type="text" name="fname" placeholder="Name*" required />
-        <input type="email" name="email" placeholder="Email*" required />
-        <input type="text" name="cmessage" placeholder="Message*" required />
-        <button type="submit">SUBMIT</button>
-
+        <form action="./includes/MVC/fashion_control.php" method="POST">
+            <input type="text" name="fname" placeholder="Name*" required />
+            <input type="email" name="email" placeholder="Email*" required />
+            <input type="text" name="cmessage" placeholder="Message*" required />
+            <button type="submit">SUBMIT</button>
+        </form>
         <h4>STORE OF ACCESSORIES</h4>
         <p>Via Giulia 83, 00186 Roma, Italy, Europe</p>
         <p>+ 3 20 6800 1007, + 3 20 6800 1008</p>
