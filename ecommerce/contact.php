@@ -14,9 +14,9 @@
     <section class="input-section">
         <h2>CONTACT US ANYTIME</h2>
         <p>Liber iriure vix cu, fugit dicat no qui, posse detraxit has cu ex sint nisl discere te, tibique blandit urbanitas</p>
-        <input type="text" name="name" placeholder="Name*" required />
+        <input type="text" name="fname" placeholder="Name*" required />
         <input type="email" name="email" placeholder="Email*" required />
-        <input type="text" name="message" placeholder="Message*" required />
+        <input type="text" name="cmessage" placeholder="Message*" required />
         <button type="submit">SUBMIT</button>
 
         <h4>STORE OF ACCESSORIES</h4>
