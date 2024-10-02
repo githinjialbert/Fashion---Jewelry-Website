@@ -11,8 +11,8 @@
     <main class="main-section-cart">
         <div id="cart-products"></div>
         <button type="button" id="button">RETURN TO SHOP</button>
+        <div id="cart-totals"></div>
     </main>
-    <div id="cart-totals"></div>
     <script src="./assets/js/app.js"></script>    
 </body>
 </html>
